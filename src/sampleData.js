@@ -43,51 +43,6 @@ export const Users = [
 },
 ];
 
-// export const Usersonline = [
-//   {
-//     id: 1,
-//     name: "Chandler Bing",
-//     username: "Cbing",
-//     email: "Cbing@test.com",
-//     profilePicture: "/assets/person/Chandler.jpg",
-// },
-// {
-//     id: 2,
-//     name: "Joey Tribbiani",
-//     username: "JoeyT",
-//     email: "JoeyT@test.com",
-//     profilePicture: "/assets/person/joey.jpg",
-// },
-// {
-//     id: 3,
-//     name: "Monica Geller",
-//     username: "Mgeller",
-//     email: "Mgeller@test.com",
-//     profilePicture: "/assets/person/monica_geller.jpg",
-// },
-// {
-//   id: 4,
-//   name: "Phoebe Buffay",
-//   username: "PhoebeB",
-//   email: "PhoebeB@test.com",
-//   profilePicture: "/assets/person/Phoebe.jpg",
-// },
-// {
-//   id: 5,
-//   name: "Rachel Green",
-//   username: "Rgreen",
-//   email: "Rgreen@test.com",
-//   profilePicture: "/assets/person/rachel.jpg",
-// },
-// {
-//   id: 6,
-//   name: "Ross Geller",
-//   username: "Rgeller",
-//   email: "Rgeller@test.com",
-//   profilePicture: "/assets/person/RossGeller.jpg",
-// },
-// ];
-
 export const posts = [
     {
       id: 1,

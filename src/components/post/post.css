@@ -1,4 +1,4 @@
-.post {
+/* .post {
     width: 100%;
     border-radius: 10px;
     box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
@@ -37,31 +37,7 @@
     font-size: 12px;
   }
   
-  /* .postCenter {
-    margin: 20px 0;
-  } */
-  
-  /* .postCenter {
-    /* Remove display: flex */
-    /* margin-top: 20px;
-    color: gray;
-  }
-   */ */
 
-  /* .postImages {
-    margin-top: 20px;
-    width: 100%;
-    max-height: 500px;
-    object-fit: contain;
-  } */
-  
-  /* .postImg {
-    margin-top: 20px;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  } */
-  
   .postCenter {
     margin-top: 20px;
     color: gray;
@@ -103,5 +79,117 @@
     cursor: pointer;
     border-bottom: 1px dashed gray;
     font-size: 15px;
+  }
+   */
+
+   .post {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    margin: 30px 0;
+  }
+  
+  .postWrapper {
+    padding: 10px;
+  }
+  
+  .postTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .postTopLeft {
+    display: flex;
+    align-items: center;
+  }
+  
+  .postProfileImg {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .postUsername {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 10px;
+  }
+  
+  .postDate {
+    font-size: 12px;
+  }
+  
+  .postCenter {
+    margin-top: 20px;
+    color: gray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Added */
+    text-align: center; /* Added */
+    flex-direction: column; /* Added */
+  }
+  
+  .postImg {
+    margin: 10px;
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+  }
+  
+  .postBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .postBottomLeft {
+    display: flex;
+    align-items: center;
+  }
+  
+  .likeIcon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .postLikeCounter {
+    font-size: 15px;
+  }
+  
+  .postCommenttext {
+    cursor: pointer;
+    border-bottom: 1px dashed 65300f;
+    font-size: 15px;
+    padding: 8px;
+     
+  }
+  
+  .postCommentForm {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 8px;
+  }
+  
+  .postCommentInput {
+    flex-grow: 1;
+    padding: 15px;
+    border: 0.8px solid 65300f;
+    border-radius: 15px;
+  }
+  
+  .postCommentButton {
+    margin-left: 8px;
+    padding: 9px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
   }
   

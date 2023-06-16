@@ -8,7 +8,7 @@ function Share({ addNewPost }) {
   const handleShare = () => {
     const newPost = {
       id: Math.random(),
-      userId: 1, // Replace with the appropriate user ID
+      userId: 1, 
       desc: postText,
       date: new Date().toDateString(),
       like: 0,
