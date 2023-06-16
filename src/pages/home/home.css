@@ -1,0 +1,9 @@
+.homeContainer {
+    display: flex;
+    width: 100%;
+}
+
+.homeCenter {
+    flex: 5.5;
+  }
+  
