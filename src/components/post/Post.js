@@ -61,7 +61,7 @@ const Post = ({ post }) => {
   const toggleFeelingsOptions = () => {
     setShowFeelingsOptions((prevShowOptions) => !prevShowOptions);
   };
-
+ 
   const submitComment = (e) => {
     e.preventDefault();
     const comment = {
