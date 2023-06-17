@@ -8,18 +8,23 @@ function Share({ addNewPost }) {
   const handleShare = () => {
     const newPost = {
       id: Math.random(),
-      userId: 1, 
+      userId: 5,
       desc: postText,
       date: new Date().toDateString(),
       like: 0,
-      comment: 0
+      comment: 0,
+      thumbsUpCount: 0,
+      thumbsDownCount: 0,
+      laughCount: 0,
+      sadCount: 0,
+      angryCount: 0,
     };
-
+  
     addNewPost(newPost);
-
+  
     setPostText('');
   };
-
+  
   return (
     <div className='share'>
       <div className="shareWrapper">

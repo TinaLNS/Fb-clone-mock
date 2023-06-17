@@ -28,8 +28,22 @@
   "eslintConfig": {
     "extends": [
       "react-app"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.js",
+          "**/*.jsx"
+        ],
+        "extends": [
+          "react-app"
+        ],
+        "parserOptions": {
+          "requireConfigFile": false
+        }
+      }
     ]
-  },  
+  },
   "browserslist": {
     "production": [
       ">0.2%",
