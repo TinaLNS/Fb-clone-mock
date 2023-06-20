@@ -114,18 +114,24 @@ const Post = ({ post }) => {
           )}
         </div>
         <div className="postBottom">
-          <div className="postBottomLeft">
-            <div className="likeOptions">
-              {showFeelingsOptions && (
-                <div className="feelingsOptions">
+        <div className="postBottomLeft">
+        <div className="likeOptions">
+          {showFeelingsOptions && (
+            <div className="feelingsOptions">
                   <div className="optionItem">
                     {isThumbsUp ? (
                       <ThumbUpRoundedIcon className="likeIcon" onClick={thumbsUpHandler} />
                     ) : (
                       <ThumbUpRoundedIcon className="favoriteIcon" onClick={thumbsUpHandler} />
                     )}
-                    <span className="postLikeCounter">{thumbsUpCount} thumbs up</span>
-                  </div>
+                    <span
+            className="postLikeCounter"
+            onMouseEnter={() => setShowFeelingsOptions(true)}
+            onMouseLeave={() => setShowFeelingsOptions(false)}
+          >
+            {like} people like it
+          </span>
+        </div>
                   <div className="optionItem">
                     {isThumbsDown ? (
                       <ThumbDownRoundedIcon className="likeIcon" onClick={thumbsDownHandler} />
