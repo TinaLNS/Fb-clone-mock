@@ -171,17 +171,16 @@ const Post = ({ post }) => {
               ) : (
                 <ThumbUpRoundedIcon className="favoriteIcon" onClick={likeHandler} />
               )}
-              <span className="postLikeCounter">{like} people like it</span>
+              <span
+  className="postLikeCounter"
+  onMouseEnter={toggleFeelingsOptions}
+  onMouseLeave={toggleFeelingsOptions}
+>
+  {like} people like it
+</span>
+
             </div>
-            <div className="shareOptions">
-              <button className="toggleOptionsButton" onClick={toggleFeelingsOptions}>
-                <EmojiEmotions
-                  htmlColor="goldenrod"
-                  className="shareIcon"
-                  onClick={toggleFeelingsOptions}
-                />
-              </button>
-            </div>
+            
           </div>
           <div className="postBottomRight">
             <ModeCommentRoundedIcon className="commentIcon" onClick={toggleCommentForm} />
