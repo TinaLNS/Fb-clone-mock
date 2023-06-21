@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import './share.css';
-import { PermMedia, Label, Room, EmojiEmotions, ThumbUpRounded, ThumbDownRounded, SentimentVerySatisfiedRounded, SentimentDissatisfiedRounded, SentimentVeryDissatisfiedRounded } from '@mui/icons-material';
+import {
+  PermMedia,
+  Label,
+  Room,
+  EmojiEmotions,
+  ThumbUpRounded,
+  ThumbDownRounded,
+  SentimentVerySatisfiedRounded,
+  SentimentDissatisfiedRounded,
+  SentimentVeryDissatisfiedRounded,
+} from '@mui/icons-material';
 
 function Share({ addNewPost }) {
   const [postText, setPostText] = useState('');
-  const [isLiked, setIsLiked] = useState(false);
-  const [like, setLike] = useState(0);
   const [showFeelingsOptions, setShowFeelingsOptions] = useState(false);
   const [thumbsUpCount, setThumbsUpCount] = useState(0);
   const [isThumbsUp, setIsThumbsUp] = useState(false);
@@ -18,11 +26,6 @@ function Share({ addNewPost }) {
   const [angryCount, setAngryCount] = useState(0);
   const [isAngry, setIsAngry] = useState(false);
 
-  const likeHandler = () => {
-    setIsLiked((prevLiked) => !prevLiked);
-    setLike((prevLike) => (isLiked ? prevLike - 1 : prevLike + 1));
-  };
-
   const toggleFeelingsOptions = () => {
     setShowFeelingsOptions((prevShow) => !prevShow);
   };
@@ -33,13 +36,11 @@ function Share({ addNewPost }) {
       userId: 5,
       desc: postText,
       date: new Date().toDateString(),
-      like: 0,
-      comment: 0,
-      thumbsUpCount: 0,
-      thumbsDownCount: 0,
-      laughCount: 0,
-      sadCount: 0,
-      angryCount: 0,
+      thumbsUpCount,
+      thumbsDownCount,
+      laughCount,
+      sadCount,
+      angryCount,
     };
 
     addNewPost(newPost);
@@ -106,11 +107,8 @@ function Share({ addNewPost }) {
               </div>
             </div>
             <div className="shareOptions">
-              <div
-                className="shareOption"
-                onMouseEnter={toggleFeelingsOptions}
-                onMouseLeave={toggleFeelingsOptions}
-              >
+            <div className="shareOption" onMouseEnter={() => toggleFeelingsOptions()} onMouseLeave={() => toggleFeelingsOptions()}>
+
                 <EmojiEmotions htmlColor="goldenrod" className="shareIcon" />
                 <span className="shareOptionText">Feeling/activity</span>
                 {showFeelingsOptions && (
@@ -191,6 +189,7 @@ function Share({ addNewPost }) {
       </div>
     </>
   );
-};  
+}
 
 export default Share;
+
