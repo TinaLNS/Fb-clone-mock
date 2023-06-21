@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './post.css';
-import { MoreVert, EmojiEmotions } from '@mui/icons-material';
+import { MoreVert } from '@mui/icons-material';
 import ModeCommentRoundedIcon from '@mui/icons-material/ModeCommentRounded';
 import ThumbUpRoundedIcon from '@mui/icons-material/ThumbUpRounded';
 import ThumbDownRoundedIcon from '@mui/icons-material/ThumbDownRounded';
@@ -16,7 +16,6 @@ const Post = ({ post }) => {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
   const [showCommentForm, setShowCommentForm] = useState(false);
-  const [thumbsUpCount, setThumbsUpCount] = useState(post.thumbsUpCount || 0);
   const [thumbsDownCount, setThumbsDownCount] = useState(post.thumbsDownCount || 0);
   const [laughCount, setLaughCount] = useState(post.laughCount || 0);
   const [sadCount, setSadCount] = useState(post.sadCount || 0);
@@ -34,7 +33,7 @@ const Post = ({ post }) => {
   };
 
   const thumbsUpHandler = () => {
-    setThumbsUpCount((prevCount) => prevCount + 1);
+    // setThumbsUpCount((prevCount) => prevCount + 1);
     setIsThumbsUp(true);
   };
 
@@ -61,7 +60,7 @@ const Post = ({ post }) => {
   const toggleFeelingsOptions = () => {
     setShowFeelingsOptions((prevShowOptions) => !prevShowOptions);
   };
- 
+
   const submitComment = (e) => {
     e.preventDefault();
     const comment = {
@@ -78,7 +77,7 @@ const Post = ({ post }) => {
       comments: post.comments ? post.comments + 1 : 1,
     };
 
-    const updatedPosts = posts.map((p) => (p.id === post.id ? updatedPost : p));
+    // const updatedPosts = posts.map((p) => (p.id === post.id ? updatedPost : p));
   };
 
   const toggleCommentForm = () => {

@@ -43,7 +43,10 @@
           "requireConfigFile": false
         }
       }
-    ]
+    ],
+    "rules": {
+      "no-unused-vars": "off"
+    }
   },
   "browserslist": {
     "production": [
