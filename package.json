@@ -41,12 +41,12 @@
         ],
         "parserOptions": {
           "requireConfigFile": false
+        },
+        "rules": {
+          "no-unused-vars": "off"
         }
       }
-    ],
-    "rules": {
-      "no-unused-vars": "off"
-    }
+    ]
   },
   "browserslist": {
     "production": [
@@ -68,3 +68,4 @@
     "eslint-plugin-react-hooks": "^4.6.0"
   }
 }
+
