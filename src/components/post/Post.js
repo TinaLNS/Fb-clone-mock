@@ -122,7 +122,7 @@ const Post = ({ post }) => {
                     {isThumbsUp ? (
                       <ThumbUpRoundedIcon className="likeIcon" onClick={thumbsUpHandler} />
                     ) : (
-                      <ThumbUpRoundedIcon className="favoriteIcon" onClick={thumbsUpHandler} />
+                      <ThumbUpRoundedIcon htmlColor="royalblue" className="favoriteIcon" onClick={thumbsUpHandler} />
                     )}
                     <span
             className="postLikeCounter"
@@ -134,33 +134,37 @@ const Post = ({ post }) => {
         </div>
                   <div className="optionItem">
                     {isThumbsDown ? (
-                      <ThumbDownRoundedIcon className="likeIcon" onClick={thumbsDownHandler} />
+                      <ThumbDownRoundedIcon htmlColor="royalblue" className="likeIcon" onClick={thumbsDownHandler} />
                     ) : (
-                      <ThumbDownRoundedIcon className="favoriteIcon" onClick={thumbsDownHandler} />
+                      <ThumbDownRoundedIcon 
+                      htmlColor="gray" className="favoriteIcon" onClick={thumbsDownHandler} />
                     )}
                     <span className="postLikeCounter">{thumbsDownCount} thumbs down</span>
                   </div>
                   <div className="optionItem">
                     {isLaugh ? (
-                      <SentimentVerySatisfiedRoundedIcon className="likeIcon" onClick={laughHandler} />
+                      <SentimentVerySatisfiedRoundedIcon
+                      htmlColor="Orange" className="likeIcon" onClick={laughHandler} />
                     ) : (
-                      <SentimentVerySatisfiedRoundedIcon className="favoriteIcon" onClick={laughHandler} />
+                      <SentimentVerySatisfiedRoundedIcon
+                      htmlColor="orange" className="favoriteIcon" onClick={laughHandler} />
                     )}
-                    <span className="postLikeCounter">{laughCount} laughs</span>
+                    <span className="postLikeCounter" htmlColor="purple">{laughCount} laughs</span>
                   </div>
                   <div className="optionItem">
                     {isSad ? (
-                      <SentimentDissatisfiedRoundedIcon className="likeIcon" onClick={sadHandler} />
+                      <SentimentDissatisfiedRoundedIcon htmlColor="mustard" className="likeIcon" onClick={sadHandler} />
                     ) : (
-                      <SentimentDissatisfiedRoundedIcon className="favoriteIcon" onClick={sadHandler} />
+                      <SentimentDissatisfiedRoundedIcon 
+                      htmlColor="purple" className="favoriteIcon" onClick={sadHandler} />
                     )}
                     <span className="postLikeCounter">{sadCount} sad</span>
                   </div>
                   <div className="optionItem">
                     {isAngry ? (
-                      <SentimentVeryDissatisfiedRoundedIcon className="likeIcon" onClick={angryHandler} />
+                      <SentimentVeryDissatisfiedRoundedIcon className="likeIcon" htmlColor="red" onClick={angryHandler} />
                     ) : (
-                      <SentimentVeryDissatisfiedRoundedIcon className="favoriteIcon" onClick={angryHandler} />
+                      <SentimentVeryDissatisfiedRoundedIcon className="favoriteIcon" htmlColor="red" onClick={angryHandler} />
                     )}
                     <span className="postLikeCounter">{angryCount} angry</span>
                   </div>
@@ -172,18 +176,18 @@ const Post = ({ post }) => {
                 <ThumbUpRoundedIcon className="favoriteIcon" onClick={likeHandler} />
               )}
               <span
-  className="postLikeCounter"
-  onMouseEnter={toggleFeelingsOptions}
-  onMouseLeave={toggleFeelingsOptions}
->
-  {like} people like it
-</span>
+                className="postLikeCounter"     htmlColor="royalblue"
+                  onMouseEnter={toggleFeelingsOptions}
+                   onMouseLeave={toggleFeelingsOptions}
+                >
+               {like} people like it
+            </span>
 
             </div>
             
           </div>
           <div className="postBottomRight">
-            <ModeCommentRoundedIcon className="commentIcon" onClick={toggleCommentForm} />
+            <ModeCommentRoundedIcon className="commentIcon" htmlColor="limegreen" onClick={toggleCommentForm} />
             <span className="postCommenttext" onClick={toggleCommentForm}>
               {post.comments ? post.comments.length : 0} comments
             </span>
